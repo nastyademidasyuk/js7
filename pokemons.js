@@ -4,7 +4,7 @@ export async function pokemonListPage(app) {
   app.innerHTML = `<h2>Loading pokemons...</h2>`;
 
   try {
-    const data = await getPokemonList(3, 0); // получаем 3 покемона
+    const data = await getPokemonList(3, 0); 
     const pokemons = await Promise.all(
       data.results.map(p => getPokemonById(p.name))
     );
